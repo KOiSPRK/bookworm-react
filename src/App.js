@@ -9,6 +9,7 @@ import SignupPage from "./components/pages/SignupPage";
 import ConfirmationPage from "./components/pages/ConfirmationPage";
 import UserRoute from "./components/routes/UserRoute";
 import GuestRoute from "./components/routes/GuestRoute";
+import ForgotPasswordPage from "./components/pages/ForgotPasswordPage";
 
 const App = ({ location, isAuthenticated }) => (
   <div className="ui container">
@@ -16,6 +17,7 @@ const App = ({ location, isAuthenticated }) => (
   <Route location={location} path="/confirmation/:token" exact component={ConfirmationPage} />
   <GuestRoute location={location} path="/login" exact component={LoginPage} />
   <GuestRoute location={location} path="/signup" exact component={SignupPage} />
+  <GuestRoute location={location} path="/forgot_password" exact component={ForgotPasswordPage} />
   <UserRoute location={location} path="/dashboard" exact component={DashboardPage} />
 </div>
 );
